@@ -1,0 +1,19 @@
+{
+  "name": "p3-kevin-adda",
+  "version": "1.0.0",
+  "description": "projet 3 de la formation OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AK-WebDev/AK-WebDev.github.io.git"
+  },
+  "author": "Kevin Adda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AK-WebDev/AK-WebDev.github.io/issues"
+  },
+  "homepage": "https://github.com/AK-WebDev/AK-WebDev.github.io#readme"
+}

@@ -1,0 +1,21 @@
+@import "../sass/utils/variables";
+// @import "/SASS/Utils/functions";
+// @import "/SASS/Utils/mixins";
+
+// @import "/SASS/Base/reset";
+// @import "/SASS/Base/typo.scss";
+
+// @import "./components/buttons";
+
+// @import "./layouts/header";
+// @import "./layouts/nav";
+// @import "./layouts/container";
+// @import "./layouts/form";
+
+// @import "./pages/work";
+// @import "./pages/about";
+// @import "./pages/project";
+
+body {
+    background-color: $primary_colour;
+}
