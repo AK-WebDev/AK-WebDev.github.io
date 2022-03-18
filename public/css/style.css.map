@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/main.scss","../../sass/utils/_variables.scss"],"names":[],"mappings":"AAkBA;EACI,kBCnBc","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/base/_reset.scss","../../sass/base/typo.scss","../../sass/main.scss"],"names":[],"mappings":"AAAA,EACI,SACA,UACA,sBAGJ,kBAMI,eACA,mBAGJ,GACI,gBAGJ,oBAGI,SAIJ,qBAGI,mBAGJ,UAEI,YACA,eAIJ,MAEI,UC1CJ,GACI,8BAGJ,QACI,2BCaJ,KACI,sBAEJ,OACI,aACA,uBACA,mBACA,gBACA,YACA,0CACA,UACI","file":"style.css"}
