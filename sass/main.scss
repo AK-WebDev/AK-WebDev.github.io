@@ -17,7 +17,7 @@
 // @import "./pages/project";
 
 body {
-    background-color: #ccc;
+    background-color: #fff;
 }
 header {
     display        : flex;
@@ -28,5 +28,20 @@ header {
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
     h1 {
         font-size: x-large;
+    }
+}
+
+.search {
+    @include flexRowCenter;
+    background-color : rgba(221, 221, 221, 0.408);
+    height: 45px;
+
+    &__location {
+        @include flexRowCenter;
+        gap: 20px;
+    }
+
+    span {
+        font-weight: 500;
     }
 }
