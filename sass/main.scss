@@ -17,7 +17,7 @@
 // @import "./pages/project";
 
 body {
-    background-color: #fff;
+    background-color: #ccc;
 }
 
 header {
@@ -28,7 +28,7 @@ header {
     height         : 55px;
     box-shadow     : 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
 
-    h1 {
+    .logo {
         font-size: x-large;
     }
 }
@@ -36,7 +36,7 @@ header {
 .search {
 
     &__location {
-        @include flexRowCenter;
+        @include flex(row, center, center);
         height          : 40px;
         background-color: #dddddd9a;
         gap             : 15px;
@@ -48,7 +48,7 @@ header {
 
     &__booking {
         margin          : 0 auto;
-        height          : 300px;
+        height          : 275px;
         background-color: #f6f6f6;
 
         &__content {
@@ -58,28 +58,80 @@ header {
             padding-top   : 30px;
 
             h1 {
-                text-align: center;
+                text-align    : center;
                 letter-spacing: -1px;
-                font-weight: 700;
+                font-weight   : 700;
             }
 
             p {
                 margin-top: 15px;
                 width     : 80%;
                 text-align: center;
-                color: #5d5d5d;
+                color     : #5d5d5d;
             }
 
             button {
                 padding      : 15px 20px;
-                margin: 30px 0;
+                margin       : 30px 0;
                 border-radius: 50px;
                 background   : linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-                box-shadow     : 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
-                border: none;
-                color : #eee;
+                box-shadow   : 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
+                border       : none;
+                color        : #eee;
 
             }
         }
     }
+}
+
+.functioning {
+    @include flex(column,start,start);
+    @include global_paddings;
+    height: 430px;
+    background-color: #fff;
+
+
+    &__heading {
+        font-size  : 22px;
+        font-weight: 700;
+        margin-top: 40px;
+    }
+
+    &__mobile-card {
+        @include flex(row,center, center);
+        margin-top: 30px;
+        background-color: #f6f6f6;
+        box-shadow   : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+        padding: 25px 20px;
+        border-radius: 20px;
+        width: 90%;
+        position: relative;
+
+        span:first-child {
+            background-color: $primary_colour;
+            padding: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            @include flex(row,center,center);
+            color: #fff;
+            font-size: 15px;
+            position: absolute;
+            left: -12px;
+        }
+
+        i {
+            font-size: 20px;
+            color: #5d5d5d;
+            margin:0 30px 0 -45px;
+        }
+
+        span:last-child {
+            font-weight: bold;
+            
+        }
+    }
+
+    @import "../sass/components/functioning__list-card";
+    @import "../sass/components/functioning__shop-card";
 }

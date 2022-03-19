@@ -1,0 +1,34 @@
+&__shop-card {
+    @include flex(row,center, center);
+    margin-top: 30px;
+    background-color: lighten($color: $primary-colour, $amount: 35);
+    box-shadow   : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    padding: 25px 20px;
+    border-radius: 20px;
+    width: 90%;
+    position: relative;
+
+    span:first-child {
+        background-color: $primary_colour;
+        padding: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        @include flex(row,center,center);
+        color: #fff;
+        font-size: 15px;
+        position: absolute;
+        left: -12px;
+    }
+
+    i {
+        font-size: 20px;
+        color: $primary_colour;
+        margin:0 30px 0 -45px;
+    }
+
+    span:last-child {
+        font-weight: bold;
+        
+    }
+}
