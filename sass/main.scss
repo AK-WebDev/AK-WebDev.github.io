@@ -34,11 +34,9 @@ header {
 }
 
 main .headings {
-
     font-size  : 22px;
     font-weight: 700;
     margin-top : 40px;
-
 }
 
 .search {
@@ -49,7 +47,6 @@ main .headings {
         background-color: #dddddd9a;
         gap             : 15px;
     }
-
     span {
         font-weight: 500;
     }
@@ -70,23 +67,20 @@ main .headings {
                 letter-spacing: -1px;
                 font-weight   : 700;
             }
-
             p {
                 margin-top: 15px;
                 width     : 80%;
                 text-align: center;
                 color     : #5d5d5d;
             }
-
             button {
                 padding      : 15px 20px;
                 margin       : 30px 0;
                 border-radius: 50px;
-                background   : linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+                background   : linear-gradient(355deg, rgba(147, 86, 220, 1) 15%, rgba(255, 121, 218, 1) 100%);
                 box-shadow   : 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
                 border       : none;
                 color        : #eee;
-
             }
         }
     }
@@ -97,7 +91,6 @@ main .headings {
     @include global_paddings;
     height          : 430px;
     background-color: #fff;
-
 
     &__mobile-card {
         @include flex(row, center, center);
@@ -121,16 +114,13 @@ main .headings {
             position : absolute;
             left     : -12px;
         }
-
         i {
             font-size: 20px;
             color    : #5d5d5d;
             margin   : 0 30px 0 -45px;
         }
-
         span:last-child {
             font-weight: bold;
-
         }
     }
 
@@ -143,7 +133,6 @@ main .headings {
     @include global_paddings;
     background-color: #f6f6f6;
     height          : 1200px;
-
 
     &__cards {
         display: block;
@@ -162,19 +151,16 @@ main .headings {
             width        : 100%;
             border-radius: 20px 20px 0 0;
         }
-
-
         h3 {
             font-weight: 800;
             letter-spacing: -1px;
             margin: 10px 0px 2px 10px;
             font-size: 18px;
         }
-
         span {
-            display: block;
-            margin: 0px 0px 10px 10px;
+            margin: 0 0 10px 10px;
             font-size: 14px;
+
             &:first-of-type {
                 display: block;
                 font-size: 14px; 
@@ -191,14 +177,34 @@ main .headings {
                 color: darken($color: $tertiary-colour, $amount: 40);
             }
         }
-
         .fa-heart {
             font-size: 22px;
             position: absolute;
             right: 25px;
             bottom: 40px;
         }
-
-        
     }
+}
+
+footer {
+    @include flex(column,start,start);
+    @include global_paddings;
+    background-color: rgb(56, 56, 56);
+    height: 200px;
+    
+    span {
+        font-size: 22px;
+        font-weight: 500;
+        font-family: "Shrikhand" ,serif;
+        color: #f6f6f6;
+        margin: 15px 0;
+    }
+    a {
+        display: flex;
+        color: #f6f6f6;
+        gap : 3px;
+        &:first-of-type  {gap: 20px;}
+        &:nth-child(3) {gap: 15px;}
+        margin-bottom: 5px;
+    }  
 }
