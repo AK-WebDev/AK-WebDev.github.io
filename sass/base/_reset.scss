@@ -1,6 +1,6 @@
-*{
-    margin : 0;
-    padding: 0;
+* {
+    margin    : 0;
+    padding   : 0;
     box-sizing: border-box
 }
 
@@ -17,16 +17,17 @@ h6 {
 ul {
     list-style: none
 }
+
 a {
     text-decoration: none;
-    color: black;
+    color          : black;
 }
 
 button,
 input,
 select {
-    margin: 0;
-    outline : none;
+    margin : 0;
+    outline: none;
 }
 
 
@@ -38,8 +39,9 @@ select {
 
 img,
 video {
-    height   : auto;
-    max-width: 100%
+    // height    : auto;
+    max-width : 100%;
+    
 }
 
 
