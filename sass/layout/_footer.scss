@@ -1,0 +1,22 @@
+footer {
+    @include flex(column,start,start);
+    @include global_paddings;
+    background-color: rgb(56, 56, 56);
+    height: 200px;
+    
+    span {
+        font-size: 22px;
+        font-weight: 500;
+        font-family: "Shrikhand" ,serif;
+        color: #f6f6f6;
+        margin: 15px 0;
+    }
+    a {
+        display: flex;
+        color: #f6f6f6;
+        gap : 3px;
+        &:first-of-type  {gap: 20px;}
+        &:nth-child(3) {gap: 15px;}
+        margin-bottom: 5px;
+    }  
+}
