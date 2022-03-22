@@ -19,13 +19,13 @@
     <!-- lien SCSS  -->
     <link rel="stylesheet" href="/public/css/style.css">
 
-    <title>La palette du goût <br> OhMyFood</title>
+    <title>La palette du goût - OhMyFood</title>
 </head>
 
-<body>
-    <header class="HeaderVariant">
-        <i class="fa-solid fa-arrow-left"></i>
-        <a href="/index.html" class="logo">ohmyfood</a>
+<body class="bodyvariant">
+    <header class="headervariant">
+        <a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <span class="HeaderVariant__logo logo">ohmyfood</span>
     </header>
 
     <main>
@@ -34,7 +34,7 @@
         </section>
 
         <section class="menu">
-            <h1 class="MenuHeading">La palette du goût 
+            <h1 class="menu__menuheading logo">La palette du goût 
                 <i class="fa-regular fa-heart"></i>
             </h1>
 
@@ -42,68 +42,70 @@
 
             <a class="menu__meal_cards" href="#">
                 <h3>Fricassée d'escargot</h3>
-                <span>Au piment d'esspelette </span>
-                <b>25€</b>
+                <span>Au piment d'esspelette <b>25€</b> </span>
+                
             </a>   
 
             <a class="menu__meal_cards" href="#">
                 <h3>Foie gras de canard mi-cuit</h3>
-                <span>Et ses copeaux de truffe noire</span>
-                <b>35€</b>
+                <span>Et ses copeaux de truffe noire<b>35€</b></span>
+                
             </a>        
             <a class="menu__meal_cards" href="#">
                 <h3>Oeuf au plat</h3>
-                <span>Assaisonné à la truffe sur lit de caviar</span>
-                <b>20€</b>
+                <span>Assaisonné à la truffe sur lit de caviar<b>20€</b></span>
+                
             </a>  
             
             <h2 class="menu__meal_part">Plats</h2>
 
             <a class="menu__meal_cards" href="#">
                 <h3>Filet de boeuf aux herbes</h3>
-                <span>Accompagné de sa ribambelle de légumes</span>
-                <b>40€</b>
+                <span>Accompagné de sa ribambelle de légumes<b>40€</b></span>
+                
 
             </a>
             <a class="menu__meal_cards" href="#">
                 <h3>Parmentier de queue de boeuf</h3>
-                <span>À la truffe noire sur sa purée de panais</span>
-                <b>35€</b>
+                <span>À la truffe noire sur sa purée de panais<b>35€</b></span>
+                
             </a>
             <a class="menu__meal_cards" href="#">
                 <h3>Filet de turbot</h3>
-                <span>Aux agrumes</span>
-                <b>44€</b>
+                <span>Aux agrumes<b>44€</b></span>
+                
             </a>
 
             <h2 class="menu__meal_part">Desserts</h2>
 
             <a class="menu__meal_cards" href="#">
                 <h3>Paris-Brest</h3>
-                <span>Revisité</span>
-                <b>18€</b>
+                <span>Revisité<b>18€</b></span>
+                
             </a>
             <a class="menu__meal_cards" href="#">
                 <h3>Macaron au chocolat d'exception</h3>
-                <span>Et glace à la vanille de Madagascar</span>
-                <b>22€</b>
+                <span>Et glace à la vanille de Madagascar<b>22€</b></span>
+                
             </a>
             <a class="menu__meal_cards" href="#">
                 <h3>Mousse au chocolat</h3>
-                <span>Au piment d'Espelette et à la truffe noire</span>
-                <b>23€</b>
+                <span>Au piment d'Espelette et à la truffe noire<b>23€</b></span>
+                
             </a>
 
-            <button class="menu__btn">
-                <span>Commander</span>
-            </button>
+            <div>
+                <button class="menu__btn" type="button">
+                    <span>Commander</span>
+                </button>
+            </div>
             
         </section>
 
     </main>
 
 
-    <Footer>
+    <Footer class="footervariant">
 
         <span>ohmyfood</span>
         <a href="#"> <i class="fa-solid fa-utensils"> </i> Proposer un restaurant</a>
