@@ -90,12 +90,12 @@ main .headings {
 }
 
 .functioning {
-    @include flex(column, start, start);
+    @include flex(column, start, center);
     @include global_paddings;
     height          : 430px;
     background-color: #fff;
 
-    &__mobile-card {
+    &__cards {
         @include flex(row, center, center);
         margin-top      : 30px;
         background-color: #f6f6f6;
@@ -228,6 +228,17 @@ footer {
 
 // Style de la page menu "La palette du goût" 
 
+
+.bodyvariant {
+    position  : relative;
+    height    : 1500px;
+    // box-sizing: border-box
+}
+
+.bodysize-note {
+    height: 1580px;
+}
+
 // header
 .headervariant {
     @include flex;
@@ -242,23 +253,19 @@ footer {
 }
 
 // main 
-.bodyvariant {
-    position: relative;
-    height  : 1355px;
 
-}
 
 .banner {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+    width          : 100%;
+    height         : 250px;
+    object-fit     : cover;
     object-position: center;
 }
 
 .menu {
     position        : absolute;
     top             : 50px;
-    min-width       : 90%;
+    width           : 100%;
     background-color: #f6f6f6;
     border-radius   : 25px 25px 0 0;
     padding         : 25px 20px;
@@ -282,7 +289,7 @@ footer {
 
     &__meal_cards {
         display         : block;
-        height          : 28px;
+        height          : 72px;
         width           : 0 auto;
         background-color: #fff;
         box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -297,16 +304,17 @@ footer {
 
         span {
             font-size: 14px;
-            @include flex(row,space-between,center)
+            @include flex(row, space-between, center)
         }
-        
-        
+
+
 
     }
+
     @import "../sass/components/menu_btn";
 
     div {
-        @include flex (row,center,center);
+        @include flex (row, center, center);
     }
 }
 
