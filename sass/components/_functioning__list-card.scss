@@ -8,6 +8,15 @@
     width: 90%;
     position: relative;
 
+    &:hover {
+        background-color: lighten($color: $primary-colour, $amount: 35);
+        cursor: pointer;
+        transition: 0.2s;
+        i {
+            color: $primary_colour;
+        }
+    }
+
     span:first-child {
         background-color: $primary_colour;
         padding: 10px;
