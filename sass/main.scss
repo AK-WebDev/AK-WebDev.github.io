@@ -70,6 +70,10 @@ main .headings {
             align-items   : center;
             padding-top   : 30px;
 
+            &__anchor  {
+                color: #fff;
+            }
+
             h1 {
                 text-align    : center;
                 letter-spacing: -1px;
