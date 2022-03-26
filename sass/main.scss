@@ -258,13 +258,16 @@ footer {
 .headervariant {
     @include flex;
     position: relative;
-
-    a {
+    justify-content: center;
+    .fa-arrow-left {
         position : absolute;
         left     : 20px;
+        bottom: 20px;
         font-size: 20px;
         color    : rgb(83, 83, 83);
     }
+   
+    
 }
 
 // main 
@@ -342,11 +345,26 @@ footer {
 }
 
 // footer
+footer a:first-of-type {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
 .footervariant {
     position: absolute;
     bottom  : 0px;
     width   : 100%;
+    .logo {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
 }
+
+// Les animations
+
+//Apparition progressive des plats
+
+
+
 
 // Tablet Média Queries 
 
