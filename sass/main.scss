@@ -225,8 +225,10 @@ main .headings {
             position : absolute;
             right    : 25px;
             bottom   : 40px;
-            &:hover {
-                opacity:0;
+            cursor   : pointer;
+
+            &:active {
+                opacity   : 0;
                 transition: opacity 0ms;
             }
 
@@ -342,17 +344,17 @@ footer {
         padding    : 0 15px 15px 0;
 
         &__icon_wrapper {
-            position: relative;
+            position   : relative;
             line-height: 1;
 
-            
+
             &::before {
                 content    : "\f004";
                 font-family: "Font Awesome 6 free";
                 font-weight: bold;
                 position   : absolute;
-                top: 0;
-                left: 0;
+                top        : 0;
+                left       : 0;
                 right      : 0;
                 bottom     : 0;
                 color      : #ff79da;
@@ -360,6 +362,7 @@ footer {
                 font-size  : 24px;
                 opacity    : 0;
             }
+
             &:hover::before {
                 opacity   : 1;
                 transition: opacity 500ms ease-in-out;
@@ -376,9 +379,12 @@ footer {
         margin-bottom : 10px;
     }
 
-    &__starter {
-        @include flex(column, start, start);
-    }
+    // &__starter {
+    //     @include flex(column, start, start);
+    // }
+
+  
+
 
     &__meal_cards {
         display         : block;
@@ -389,7 +395,8 @@ footer {
         border-radius   : 15px;
         padding         : 15px 15px 15px 10px;
         margin-bottom   : 10px;
-        font-size       : 14px;
+        font-size       : 14px;        
+        
 
         h3 {
             font-weight: 700;
@@ -437,7 +444,38 @@ footer a:first-of-type {
 
 //Apparition progressive des plats
 
+// Fade-In Animation :
 
+$fade-in-delay : 300ms;
+
+@keyframes fade-in {
+    0% {
+        opacity  : 0;
+        transform: translateY(30%);
+    }
+
+    100% {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}
+//  J'assigne l'animation créer aux groupes de cartes correspondantes,
+//  en précisant une durée, un délai pour chaque groupes, et un fill-mode sur both
+//  pour que pendant le delai de lancement, les cartes ne s'affichent pas (la 1ere image de l'animation ayant une opacity de 0)
+//  et pour que la dernière image de l'animation reste à la fin de l'animation (opacity de 1 à 100%)
+.menu {
+&__starter_group {
+    animation : fade-in 1000ms $fade-in-delay both;
+}
+
+&__maincourse_group {
+    animation : fade-in 1000ms $fade-in-delay+300ms both;
+}
+
+&__dessert_group {
+    animation : fade-in 1000ms $fade-in-delay+600ms both;
+}
+}
 
 
 // Tablet Média Queries 
