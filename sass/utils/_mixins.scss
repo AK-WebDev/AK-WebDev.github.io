@@ -10,6 +10,31 @@
 @mixin global_paddings {
     padding: 0px 20px;
 }
+
 @mixin global_margins {
     margin: 0px 20px;
+}
+
+@mixin belowbefore($bcg:red,$content :"before", $opacity: 1, $z-index:55) {
+
+    background-color: $bcg;
+    //changer la couleur de fond en paramètre
+
+    opacity        : $opacity;
+    //changer l'opacité en paramètre
+
+    content        : $content;
+    //changer le content en paramètre
+
+    z-index        : $z-index;
+    //changer le z-index en paramètre
+
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
