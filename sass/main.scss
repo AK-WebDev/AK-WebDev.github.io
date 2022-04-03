@@ -336,7 +336,7 @@ footer {
     top             : 50px;
     width           : 100%;
     background-color: #f6f6f6;
-    border-radius   : 25px 25px 0 0;
+    border-radius   : 40px 40px 0 0;
     padding         : 25px 20px;
     overflow        : hidden;
     top             : 250px;
@@ -406,15 +406,15 @@ footer {
         position        : relative;
 
         &__last_line {
-            display         : flex;
-            transition      : width 300ms ease-in-out;
-            width           : 100%;
+            display   : flex;
+            transition: width 300ms ease-in-out;
+            width     : 100%;
         }
 
         &:hover .menu__meal_cards__last_line {
             width: 80%;
         }
-        
+
         h3 {
             font-weight  : 700;
             margin-bottom: 2px;
@@ -454,7 +454,7 @@ footer {
                 font-size : 24px;
                 color     : white;
                 transform : rotate(0deg);
-                transition: transform 500ms;
+                transition: transform 700ms;
 
                 &:hover {
                     transform: rotate(360deg);
@@ -472,13 +472,8 @@ footer {
     }
 
     @import "../sass/components/menu_btn";
-    
+
 }
-
-
-
-
-
 
 // footer
 footer a:first-of-type {
@@ -517,10 +512,10 @@ $fade-in-delay : 300ms;
     }
 }
 
-//  J'assigne l'animation créer aux groupes de cartes correspondantes,
+//  J'assigne l'animation crée aux groupes de cartes correspondantes,
 //  en précisant une durée, un délai pour chaque groupes, et un fill-mode sur both
 //  pour que pendant le delai de lancement, les cartes ne s'affichent pas (la 1ere image de l'animation ayant une opacity de 0)
-//  et pour que la dernière image de l'animation reste à la fin de l'animation (opacity de 1 à 100%)
+//  et pour que l'animation finisse sur sa dernière image (opacity de 1 à 100%)
 .menu {
     &__starter_group {
         animation: fade-in 1000ms $fade-in-delay both;
@@ -536,8 +531,12 @@ $fade-in-delay : 300ms;
 }
 
 // Lighten button animation
+
 .btn {
     position: relative;
+
+    // je crée un ::before légèrement plus clair grâce à la fonction ligten, ainsi qu'une box-shadow légèrement
+    // plus prononcée qui va venir remplacer notre bouton initial lors du survol de la souris.
 
     &::before {
         opacity        : 0;
@@ -599,92 +598,67 @@ $fade-in-delay : 300ms;
 // loading spinner
 
 .loading-spinner {
-    position        : fixed;
-    top             : 0vh;
-    left            : 0vw;
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
+    position : fixed;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+
     width           : 100%;
     height          : 100%;
     z-index         : 9999;
-    background-color: rgb(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     animation       : disappear 3000ms 2900ms forwards;
 
-
-}
-
-
-
-.container {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    position       : relative;
-
-    .loader-icon {
-
-        width    : 100%;
-        height   : 100%;
-        color    : $tertiary_colour;
-        opacity  : 1;
-        font-size: 50px;
-        animation: disappear 3000ms 2900ms forwards;
-
-
-    }
-
     &::before {
-        content        : "";
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
-        width          : 100%;
-        height         : 100%;
-        font-size      : 50px;
-        border-radius  : 100px;
-        padding        : 100px;
-        border-bottom  : 5px solid $primary_colour;
-        animation      : before-spin 3s ease-out forwards;
+        content      : "";
+        width: 100px;
+        border-radius: 100px;
+        padding      : 100px;
+        border-bottom: 5px solid $primary_colour;
+        animation    : before-spin 3s ease-out forwards;
+        position     : absolute;
+        top          : 50%;
+        left         : 50%;
+        margin: -100px -100px;
     }
 
     &::after {
-        content        : "";
-        display        : flex;
-        justify-content: center;
-        align-items    : center;
-        width          : 100%;
-        height         : 100%;
-        font-size      : 50px;
-        border-radius  : 100px;
-        padding        : 100px;
-        border-bottom  : 5px solid $primary_colour;
-        animation      : after-spin 3s ease-out forwards;
-
+        content      : "";
+        width: 100px;
+        border-radius: 100px;
+        padding      : 90px;
+        border-bottom: 5px solid $secondary_colour;
+        animation    : after-spin 3s ease-out forwards;
+        position     : absolute;
+        top          : 50%;
+        left         : 50%;
+        margin: -90px -90px;
     }
+
 }
 
-@keyframes icon-spin {
 
-    25%,
-    35% {
-        transform: rotate(20deg);
-    }
 
-    90%,
-    95% {
-        transform: rotate(-1480deg);
-    }
 
-    100% {
-        transform: rotate(-1440deg);
-    }
 
-    99%,
-    100% {
-        opacity: 0;
-    }
+
+
+.loader-icon {
+
+    width    : 50px;
+    height   : 50px;
+    color    : $tertiary_colour;
+    opacity  : 1;
+    font-size: 50px;
+    animation: disappear 3000ms 2900ms forwards;
+    position : absolute;
+    top      :50% ;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    z-index  : 99;
+
 }
+
 
 @keyframes before-spin {
 
