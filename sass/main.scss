@@ -531,9 +531,11 @@ $fade-in-delay : 300ms;
 }
 
 // Lighten button animation
-
 .btn {
     position: relative;
+}
+.search__booking__content__anchor {
+    
 
     // je crée un ::before légèrement plus clair grâce à la fonction ligten, ainsi qu'une box-shadow légèrement
     // plus prononcée qui va venir remplacer notre bouton initial lors du survol de la souris.
