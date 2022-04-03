@@ -40,16 +40,22 @@
 
         &__meal_part {
             display: block;
-            margin: 0 auto;
+            margin: 32px auto;
             text-align: center;
-            margin-bottom: 30px;
-            margin-top: 15px;
+            
         }
         &__meal_cards {
             max-width: 60%;
             margin: 0 auto;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             
+            .validate-box {
+                width: 15%;
+            }
+
+            &:hover .menu__meal_cards__last_line {
+                width: 85%;
+            }
 
         }
     }
