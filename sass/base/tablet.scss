@@ -8,7 +8,7 @@
     }
 
     .bodyvariant {
-        height: 1640px;
+        height: 1635px;
     }
 
     .bodysize-note {
@@ -31,6 +31,14 @@
     }
 
     .menu {
+
+        &__heading_container {
+            @include flex(center,);
+            gap: 2%;
+            margin: 10px 0;
+        }
+
+
         &__menuheading {
             justify-content: center;
             gap: 25px;
@@ -42,10 +50,11 @@
             display: block;
             margin: 32px auto;
             text-align: center;
+           
             
         }
         &__meal_cards {
-            max-width: 60%;
+            max-width: 580px;
             margin: 0 auto;
             margin-bottom: 20px;
             

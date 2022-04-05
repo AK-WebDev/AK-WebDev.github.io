@@ -329,6 +329,7 @@ footer {
     height         : 250px;
     object-fit     : cover;
     object-position: center;
+
 }
 
 .menu {
@@ -341,14 +342,29 @@ footer {
     overflow        : hidden;
     top             : 250px;
 
+
+    &__heading_container {
+        @include flex (row, space-between, center);
+        line-height  : 1;
+        margin-bottom: 20px;
+
+        @media (min-width: 626px) {
+            justify-content: center;
+            gap            : 25px;
+        }
+    }
+
     &__menuheading {
         @include flex(row, space-between, );
         font-weight: 500;
-        padding    : 0 15px 15px 0;
+
+
+
 
         &__icon_wrapper {
             position   : relative;
             line-height: 1;
+            font-size  : 25px;
 
 
             &::before {
@@ -383,7 +399,14 @@ footer {
         text-transform: uppercase;
         padding-bottom: 3px;
         margin-bottom : 10px;
+
+        @media (min-width: 626px) {
+
+            margin: 20px auto;
+        }
+
     }
+
 
     // &__starter {
     //     @include flex(column, start, start);
@@ -396,10 +419,12 @@ footer {
         display         : block;
         height          : 65px;
         width           : 100%;
+        max-width       : 580px;
         background-color: #fff;
         box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
         border-radius   : 15px;
         padding         : 15px;
+        margin          : 0 auto;
         margin-bottom   : 17px;
         font-size       : 14px;
         overflow        : hidden;
@@ -469,6 +494,7 @@ footer {
         &:hover .validate-box__check_icon {
             transform: rotate(360deg);
         }
+
     }
 
     @import "../sass/components/menu_btn";
@@ -534,8 +560,9 @@ $fade-in-delay : 300ms;
 .btn {
     position: relative;
 }
+
 .search__booking__content__anchor {
-    
+
 
     // je crée un ::before légèrement plus clair grâce à la fonction ligten, ainsi qu'une box-shadow légèrement
     // plus prononcée qui va venir remplacer notre bouton initial lors du survol de la souris.
@@ -613,7 +640,7 @@ $fade-in-delay : 300ms;
 
     &::before {
         content      : "";
-        width: 100px;
+        width        : 100px;
         border-radius: 100px;
         padding      : 100px;
         border-bottom: 5px solid $primary_colour;
@@ -621,12 +648,12 @@ $fade-in-delay : 300ms;
         position     : absolute;
         top          : 50%;
         left         : 50%;
-        margin: -100px -100px;
+        margin       : -100px -100px;
     }
 
     &::after {
         content      : "";
-        width: 100px;
+        width        : 100px;
         border-radius: 100px;
         padding      : 90px;
         border-bottom: 5px solid $secondary_colour;
@@ -634,7 +661,7 @@ $fade-in-delay : 300ms;
         position     : absolute;
         top          : 50%;
         left         : 50%;
-        margin: -90px -90px;
+        margin       : -90px -90px;
     }
 
 }
@@ -654,7 +681,7 @@ $fade-in-delay : 300ms;
     font-size: 50px;
     animation: disappear 3000ms 2900ms forwards;
     position : absolute;
-    top      :50% ;
+    top      : 50%;
     left     : 50%;
     transform: translate(-50%, -50%);
     z-index  : 99;
