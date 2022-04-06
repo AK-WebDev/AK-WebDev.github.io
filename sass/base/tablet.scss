@@ -12,7 +12,7 @@
     }
 
     .bodysize-note {
-        height: 1710px;
+        height: 1690px;
     }
 
     .restaurants__cards-wrapper {
@@ -33,7 +33,7 @@
     .menu {
 
         &__heading_container {
-            @include flex(center,);
+            @include flex(row,center);
             gap: 2%;
             margin: 10px 0;
         }

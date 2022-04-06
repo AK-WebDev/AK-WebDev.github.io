@@ -26,7 +26,7 @@ header {
     align-items    : center;
     background     : #fff;
     height         : 55px;
-    box-shadow     : 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    @include box-shadow(rgba(0, 0, 0, 0.3));
 
     .logo {
         font-size: x-large;
@@ -87,9 +87,9 @@ main .headings {
                 color     : #5d5d5d;
             }
 
-            button {
+            .btn, button {
                 background   : linear-gradient(355deg, rgba(147, 86, 220, 1) 15%, rgba(255, 121, 218, 1) 100%);
-                box-shadow   : 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
+                @include box-shadow(rgba(0, 0, 0, 0.3));
                 padding      : 15px 20px;
                 margin       : 30px 0;
                 border-radius: 50px;
@@ -112,9 +112,9 @@ main .headings {
 
     &__cards {
         @include flex(row, center, center);
+        @include box-shadow;
         margin-top      : 30px;
         background-color: #f6f6f6;
-        box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
         padding         : 25px 20px 25px 30px;
         border-radius   : 20px;
         width           : 90%;
@@ -169,12 +169,12 @@ main .headings {
     }
 
     &__cards {
+        @include box-shadow;
         display         : block;
         height          : 250px;
         width           : 100%;
         margin-top      : 20px;
         background-color: #fff;
-        box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
         border-radius   : 15px;
         position        : relative;
         transition      : transform 200ms;
@@ -408,20 +408,18 @@ footer {
     }
 
 
-    // &__starter {
-    //     @include flex(column, start, start);
-    // }
+    
 
 
 
 
     &__meal_cards {
+        @include box-shadow;
         display         : block;
         height          : 65px;
         width           : 100%;
         max-width       : 580px;
         background-color: #fff;
-        box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
         border-radius   : 15px;
         padding         : 15px;
         margin          : 0 auto;
@@ -582,7 +580,7 @@ $fade-in-delay : 300ms;
         border-radius  : 50px;
         background     : linear-gradient(355deg, lighten(#9356dc, 5) 15%, lighten(#ff79da, 5) 100%);
         color          : #fff;
-        box-shadow     : 0px 2px 5px 3px rgba(0, 0, 0, 0.272);
+        @include box-shadow(rgba(0, 0, 0, 0.272));
         cursor         : pointer;
     }
 
@@ -613,7 +611,7 @@ $fade-in-delay : 300ms;
         border-radius  : 50px;
         background     : linear-gradient(355deg, lighten(#9356dc, 5) 15%, lighten(#ff79da, 5) 100%);
         color          : #fff;
-        box-shadow     : 0px 2px 5px 3px rgba(0, 0, 0, 0.272);
+        @include box-shadow(rgba(0, 0, 0, 0.272));
         cursor         : pointer;
     }
 
