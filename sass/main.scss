@@ -1,5 +1,5 @@
 @import "../sass/utils/variables";
-@import "../sass/utils/functions";
+
 @import "../sass/utils/mixins";
 
 @import "../sass/base/reset";
@@ -70,9 +70,7 @@ main .headings {
             align-items   : center;
             padding-top   : 30px;
 
-            &__anchor {
-                color: #fff;
-            }
+
 
             h1 {
                 text-align    : center;
@@ -87,9 +85,9 @@ main .headings {
                 color     : #5d5d5d;
             }
 
-            .btn, button {
-                background   : linear-gradient(355deg, rgba(147, 86, 220, 1) 15%, rgba(255, 121, 218, 1) 100%);
-                @include box-shadow(rgba(0, 0, 0, 0.3));
+            .main_btn,button {
+                background: linear-gradient(355deg, $primary_colour 15%, $secondary_colour 100%);
+                @include box-shadow(rgba(0, 0, 0, 0.20));
                 padding      : 15px 20px;
                 margin       : 30px 0;
                 border-radius: 50px;
@@ -220,17 +218,20 @@ main .headings {
             }
         }
 
-        .fa-heart {
-            font-size: 22px;
-            position : absolute;
-            right    : 25px;
-            bottom   : 40px;
-            cursor   : pointer;
-        }
+        
 
         // Heart animation
 
         .icon_wrapper {
+            
+            .fa-heart {
+                font-size: 22px;
+                position : absolute;
+                right    : 25px;
+                bottom   : 40px;
+                cursor   : pointer;
+            }
+
             &::before {
                 content                : "\f004";
                 font-family            : "Font Awesome 6 free";
@@ -238,10 +239,10 @@ main .headings {
                 position               : absolute;
                 right                  : 24px;
                 bottom                 : 40px;
-                background             : linear-gradient(355deg, rgba(147, 86, 220, 1) 15%, rgba(255, 121, 218, 1) 100%);
+                background             : linear-gradient(355deg, $primary_colour 15%, $secondary_colour 100%);
                 -webkit-background-clip: text;
                 background-clip        : text;
-                z-index                : 2;
+                z-index                : -1;
                 font-size              : 23px;
                 opacity                : 0;
             }
@@ -296,7 +297,7 @@ footer {
 
 .bodyvariant {
     position     : relative;
-    height       : 1500px;
+    height       : 1495px;
     // box-sizing: border-box
 }
 
@@ -408,7 +409,7 @@ footer {
     }
 
 
-    
+
 
 
 
@@ -555,12 +556,10 @@ $fade-in-delay : 300ms;
 }
 
 // Lighten button animation
-.btn {
+
+
+.main_btn {
     position: relative;
-}
-
-.search__booking__content__anchor {
-
 
     // je crée un ::before légèrement plus clair grâce à la fonction ligten, ainsi qu'une box-shadow légèrement
     // plus prononcée qui va venir remplacer notre bouton initial lors du survol de la souris.
@@ -578,10 +577,10 @@ $fade-in-delay : 300ms;
         justify-content: center;
         align-items    : center;
         border-radius  : 50px;
-        background     : linear-gradient(355deg, lighten(#9356dc, 5) 15%, lighten(#ff79da, 5) 100%);
+        background     : linear-gradient(355deg, lighten($primary_colour, 5) 15%, lighten($secondary_colour, 5) 100%);
         color          : #fff;
-        @include box-shadow(rgba(0, 0, 0, 0.272));
-        cursor         : pointer;
+        @include box-shadow(rgba(0, 0, 0, 0.35));
+        cursor: pointer;
     }
 
     &:hover::before {
@@ -609,10 +608,10 @@ $fade-in-delay : 300ms;
         justify-content: center;
         align-items    : center;
         border-radius  : 50px;
-        background     : linear-gradient(355deg, lighten(#9356dc, 5) 15%, lighten(#ff79da, 5) 100%);
+        background     : linear-gradient(355deg, lighten($primary_colour, 5) 15%, lighten($secondary_colour, 5) 100%);
         color          : #fff;
-        @include box-shadow(rgba(0, 0, 0, 0.272));
-        cursor         : pointer;
+        @include box-shadow(rgba(0, 0, 0, 0.35));
+        cursor: pointer;
     }
 
     &:hover::before {
