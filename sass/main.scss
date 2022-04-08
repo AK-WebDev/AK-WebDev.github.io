@@ -85,7 +85,8 @@ main .headings {
                 color     : #5d5d5d;
             }
 
-            .main_btn,button {
+            .main_btn,
+            button {
                 background: linear-gradient(355deg, $primary_colour 15%, $secondary_colour 100%);
                 @include box-shadow(rgba(0, 0, 0, 0.20));
                 padding      : 15px 20px;
@@ -218,12 +219,12 @@ main .headings {
             }
         }
 
-        
+
 
         // Heart animation
 
         .icon_wrapper {
-            
+
             .fa-heart {
                 font-size: 22px;
                 position : absolute;
@@ -624,11 +625,11 @@ $fade-in-delay : 300ms;
 // loading spinner
 
 .loading-spinner {
-    position : fixed;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
-
+    position        : fixed;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    opacity         : 1;
     width           : 100%;
     height          : 100%;
     z-index         : 9999;
@@ -663,12 +664,6 @@ $fade-in-delay : 300ms;
 
 }
 
-
-
-
-
-
-
 .loader-icon {
 
     width    : 50px;
@@ -676,15 +671,12 @@ $fade-in-delay : 300ms;
     color    : $tertiary_colour;
     opacity  : 1;
     font-size: 50px;
-    animation: disappear 3000ms 2900ms forwards;
     position : absolute;
     top      : 50%;
     left     : 50%;
     transform: translate(-50%, -50%);
     z-index  : 99;
-
 }
-
 
 @keyframes before-spin {
 
