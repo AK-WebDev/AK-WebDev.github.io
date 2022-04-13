@@ -46,6 +46,7 @@ main .headings {
     margin-top : 40px;
 }
 
+
 .search {
 
     &__location {
@@ -53,7 +54,25 @@ main .headings {
         height          : 40px;
         background-color: #dddddd9a;
         gap             : 15px;
+
+        .input_location {
+            outline: none;
+            border: none;
+            background-color: #dddddd9a;
+
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 600;
+                color: black; 
+            }
+            &:focus::placeholder {
+                display: none;
+                color: transparent;
+            }
+        }
     }
+
+    
 
     span {
         font-weight: 500;
@@ -366,10 +385,9 @@ footer {
         &__icon_wrapper {
             position   : relative;
             line-height: 1;
-            font-size  : 25px;D
+            font-size  : 25px;
 
-
-            &::before {
+            D &::before {
                 content                : "\f004";
                 font-family            : "Font Awesome 6 free";
                 font-weight            : bold;
@@ -446,13 +464,13 @@ footer {
         }
 
         span {
-            overflow        : hidden;
-            text-overflow   : ellipsis;
-            white-space     : nowrap;
-            display         : block;
-            width           : 100%;
-            font-size       : 14px;
-            z-index         : 20;
+            overflow     : hidden;
+            text-overflow: ellipsis;
+            white-space  : nowrap;
+            display      : block;
+            width        : 100%;
+            font-size    : 14px;
+            z-index      : 20;
         }
 
         .price {
@@ -463,8 +481,8 @@ footer {
         }
 
         .validate-box {
-            transform : translateX(100%);
-            transition: transform 300ms ease-in-out;
+            transform       : translateX(100%);
+            transition      : transform 300ms ease-in-out;
             position        : absolute;
             right           : 0;
             top             : 0;

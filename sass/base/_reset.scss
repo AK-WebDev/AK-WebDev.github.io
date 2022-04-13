@@ -2,6 +2,7 @@
     margin    : 0;
     padding   : 0;
     box-sizing: border-box
+
 }
 
 html, body {
@@ -26,11 +27,13 @@ a {
     color          : black;
 }
 
+
+
 button,
 input,
 select {
     margin : 0;
-    outline: none;
+    outline:none;
 }
 
 
@@ -52,3 +55,4 @@ td,
 th {
     padding: 0
 }
+
