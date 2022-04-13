@@ -446,13 +446,12 @@ footer {
         }
 
         span {
+            overflow        : hidden;
+            text-overflow   : ellipsis;
+            white-space     : nowrap;
             display         : block;
             width           : 100%;
             font-size       : 14px;
-            transform-origin: left;
-            white-space     : nowrap;
-            overflow        : hidden;
-            text-overflow   : ellipsis;
             z-index         : 20;
         }
 
@@ -466,7 +465,6 @@ footer {
         .validate-box {
             transform : translateX(100%);
             transition: transform 300ms ease-in-out;
-            @include flex(row, center, center);
             position        : absolute;
             right           : 0;
             top             : 0;
@@ -474,16 +472,13 @@ footer {
             height          : 100%;
             background-color: $tertiary_colour;
             border-radius   : 0 15px 15px 0;
+            @include flex(row, center, center);
 
             &__check_icon {
-                font-size : 24px;
-                color     : white;
                 transform : rotate(0deg);
                 transition: transform 700ms;
-
-                &:hover {
-                    transform: rotate(360deg);
-                }
+                font-size : 24px;
+                color     : white;
             }
         }
 
