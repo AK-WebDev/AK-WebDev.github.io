@@ -114,14 +114,10 @@ main .headings {
                 border       : none;
                 color        : #eee;
                 cursor       : pointer;
-
-
             }
         }
     }
 }
-
-
 .functioning {
     @include flex(column, start, center);
     @include global_paddings;
